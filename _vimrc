@@ -233,7 +233,11 @@ set cmdheight=2                                       "设置命令行的高度�
 set cursorline                                        "突出显示当前行
 " set guifont=YaHei_Consolas_Hybrid:h10                 "设置字体:字号（字体名称空格用下划线代替
 " set guifont=Bitstream_Vera_Sans_Mono:h10
-set guifont=DejaVu_Sans_Mono:h12
+if g:iswindows
+    set guifont=DejaVu_Sans_Mono:h12
+if g:islinux
+    set guifont=DejaVu_Sans_Mono\ 12
+
 set nowrap                                            "设置不自动换行
 set shortmess=atI                                     "去掉欢迎界面
 
